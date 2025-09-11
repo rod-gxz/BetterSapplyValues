@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SapplyValues Style Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
 
+    <!-- Compass Logo direto na raiz -->
+    <img src="compass.png" alt="Compass" class="compass">
+
+    <h1>SapplyValues Style Quiz</h1>
+
+    <!-- Instruções -->
+    <div id="instructions-box">
+      <p>Welcome! You will answer political questions. At the end, you'll see your position on different axes.</p>
+      <p>Choose if you want the questions shuffled or in original order:</p>
+      <button onclick="setShuffle(true)">Shuffled</button>
+      <button onclick="setShuffle(false)">Unshuffled</button>
+    </div>
+
+    <!-- Quiz -->
+    <div id="quiz-box" style="display:none;">
+      <div id="progress">Question 1 of X</div>
+      <div id="question-text"></div>
+      <div id="answers"></div>
+    </div>
+
+    <!-- Resultados -->
+    <div id="result-box" style="display:none;">
+      <h2>Results</h2>
+      <canvas id="resultChart" width="400" height="400"></canvas>
+      <p id="result-text"></p>
+      <button onclick="restartQuiz()">Retake Quiz</button>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
